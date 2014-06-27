@@ -1,0 +1,27 @@
+\documentclass[a4paper]{abntex2}
+%ou \documentclass[a4paper]{abnt} para versão antiga desse pacote
+
+\usepackage[utf8]{inputenc}
+
+%Pacote para citação abnt.
+\usepackage[alf]{abntcite}
+
+%	Dica: para o Bibtex funcionar devemos primeiro compilar o documento com 
+%pdflatex, depois com a ferramenta Bibtex e por fim, novamente com a ferramenta pdflatex.
+
+%	Dica2: é possível montar um makefile ou .bat com essas chamadas de comandos (ver Dica 1) na ordem correta
+%isso facilita a compilação
+
+%	Início do documento em Latex
+\begin{document}
+
+
+\chapter{Como citar e fazer referências}
+Para elaborar referências utilizaremos o bibtex e para citar o comando \emph{cite}. O primeiro passo é obter as referências em formato bibtex. Segundo \cite{Kira1992, Kononenko94} (referência indireta) xpto é verdade segundo \citeonline{Kononenko94} (referência direta).
+
+
+%Elabora a bibliografia com os dados do arquivo bibtex.
+\bibliography{referencias}
+
+%	Fim do documento em Latex
+\end{document}

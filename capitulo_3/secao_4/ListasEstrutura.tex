@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+%	Início do documento em Latex
+\begin{document}
+
+%	Abre ambiente de section.
+\section{Listas}
+Como fazer listas em \LaTeX\ (Comando para escrever a palavra \emph{Latex}) ?	\\
+Como tudo no latex $\ldots$ será que existe um pacote para isso? 	
+
+%	Abre o ambiente subsection subordinado ao ambiente \section{Listas}.
+\subsection{Itemize}
+%	Abre o ambiente itemize que lista objetos 
+%com bolinhas pretas ao lado (padrão[\item item a]) ou um 
+%símbolo customizável (\item[$\beta$] item b)
+\begin{itemize}
+\item item a
+\item[$\beta$] item b
+\item[$\gamma$] item c
+\end{itemize}
+
+
+%	Abre o ambiente subsubsection subordinado ao ambiente \subsection{Itemize}.
+\subsubsection{Comentários}
+As listas são úteis.
+
+%	Esta subsection é subordinada ao ambiente \section{Listas}.
+\subsection{Enumerate}
+
+%	Abre o ambiente enumerate que enumera 
+%objetos de 1 a n, onde n é o número de objetos.
+\begin{enumerate}
+\item com número
+\item com número
+\item com número
+\end{enumerate}
+
+\subsection{Lista encadeadas}
+%	Exemplo de listas encadeadas.
+\begin{itemize}
+    \item Primeiro nível, \emph{itemize}, primeiro item.
+    
+    %	Onde viria o próximo item abrimos um novo ambiente itemize
+    %dessa forma, criamos o encadeamento de segundo nível.
+    \begin{itemize}
+        \item Segundo nível, \emph{itemize}, primeiro item.
+        \item Segundo nível, \emph{itemize}, segundo item.
+        
+    		%	Onde viria o próximo item abrimos um ambiente enumerate
+    		%dessa forma, criamos o encadeamento de terceiro nível.
+        \begin{enumerate}
+            \item Terceiro nível, \emph{enumerate}, primeiro item.
+            \item Terceiro nível, \emph{enumerate}, segundo item.
+
+		%	Fecha o ambiente de terceiro nível.
+        \end{enumerate}
+        
+    %	Fecha o ambiente de segundo nível.
+    \end{itemize}
+    \item Primeiro nível, \emph{itemize}, segundo item.
+\end{itemize}
+
+
+
+%	Fim do documento em Latex
+\end{document}

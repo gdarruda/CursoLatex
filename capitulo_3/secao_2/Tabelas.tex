@@ -1,0 +1,168 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+%	Pacote responsável por acrescentar 
+%tabelas grandes em latex.
+\usepackage{longtable}
+
+%Início do documento em Latex
+\begin{document}
+
+\section{Tabelas}
+Como fazer tabelas em \LaTeX\ (Comando para escrever a palavra \emph{Latex}) ?										\\
+Como tudo no latex $\ldots$ será que existe um pacote para isso? 		\\
+Tabelas com no máximo $1$ página e tabelas com mais de uma página. 	
+
+\newpage
+%	Exemplo de subsection, a numeracao é acoplada com a da section superior.
+\subsection{Tabela com até uma página}
+A Tabela \ref{ROTULO_01} (exemplo de referência cruzada) tem no máximo uma página.
+
+%	Abre ambiente para tabelas com legenda e rótulo.
+\begin{table}[h]
+
+%	Centraliza a tabela
+\center
+
+%	Abre ambiente para tabelas. Os comandos {|l|r|c|} alinham 
+%o contéudo das colunas a esquerda, direita e centro respectivamente.
+\begin{tabular}{|l|r|c|}
+
+ %	Desenha uma linha na tabela.
+ \hline
+
+ %	Título das colunas em negrito
+ \textbf{Instâncias} & \textbf{Instâncias sem mising}  & \textbf{Características} \\ \hline
+ 
+ %	Dados da tabela 
+ 569 & 569 & 30    \\ \hline
+
+%	Fecha ambiente para tabelas.
+\end{tabular}
+
+%	Legenda
+\caption{Exemplo de legenda.}
+
+%	Rótulo para referencia cruzada
+\label{ROTULO_01}
+
+%	Fecha ambiente para tabelas com legenda e rótulo.
+\end{table}
+
+%	Força conteúdo para próxima página.
+\newpage
+\subsection{Tabela com mais de uma página}
+Tabela com mais de uma página.
+
+%	Abre ambiente para tabelas com mais de uma página.
+\begin{longtable}{|c|l|l|l|}
+
+%	Legenda e rótulo.
+\caption{Exemplo de Legenda.}\label{ROTULO_02}
+\\ \hline
+
+%	Cabeçalho da primeira paǵina.
+\multicolumn{1}{|l|}{\textbf{Artigo}} & 
+\multicolumn{1}{l|}{\textbf{Inclusão}} & 
+\multicolumn{1}{l|}{\textbf{Exclusão}} &
+\multicolumn{1}{l|}{\textbf{Status}}\\ \hline \endfirsthead
+
+%	Cabeçalho repetido em todas as páginas.
+\multicolumn{4}{c}
+{{\bfseries \tablename\ \thetable{} -- Continuação da página anterior}} \\
+\hline \multicolumn{1}{|l|}{\textbf{Artigo}} &
+\multicolumn{1}{l|}{\textbf{Inclusão}} &
+\multicolumn{1}{l|}{\textbf{Exclusão}} &
+\multicolumn{1}{|l|}{\textbf{Status}} \\ \hline
+\endhead
+
+%	Rodapé repetido em todas as páginas.
+\hline \multicolumn{4}{|r|}{{Continua na próxima página}} \\ \hline
+\endfoot
+\endlastfoot
+
+		%	Dados da tabela
+	   	1	&	A(X)	&	B e C	& excluído	\\  \hline
+		2	&	A(X)	&	B e C	& excluído	\\  \hline
+		3	&	A(X)&	B e C	& excluído	\\  \hline
+		4	&	A   &	B e C	& incluído	\\  \hline
+		5	&	A(X)&	B e C	& excluído	\\  \hline
+		6	&	A   &	B e C	& incluído	\\  \hline
+		7	&	A(X)&	B e C	& excluído	\\  \hline
+		8	&	A(X)&	B e C	& excluído	\\  \hline
+		9	&	A(X)&	B e C	& excluído	\\  \hline
+		10	&	A(X)&	B e C	& excluído	\\  	\hline
+		11	&	A(X)	&	B e C	& excluído	\\  \hline
+		12	&	A	&	B e C	& incluído	\\  \hline
+		13	&	A	&	B e C	& incluído	\\  \hline
+		14	&	A(X)&	B e C	& excluído	\\  	\hline
+		15	&	A	&	B e C	& incluído	\\  \hline
+		16	&	A(X)&	B e C	& excluído	\\  \hline
+		17	&	A(X)&	B e C	& excluído	\\  \hline
+		18	&	A	&	B e C	& incluído	\\  \hline
+		19	&	A(X)&	B e C	& excluído	\\  \hline
+		20	&	A(X)&	B e C	& excluído	\\  \hline
+		21	&	A	&	B e C	& incluído	\\  \hline
+		22	&	A(X)&	B e C	& excluído	\\  \hline
+		23	&	A(X)&	B e C	& excluído	\\  \hline
+		24	&	A	&	B e C	& incluído	\\  \hline
+		25	&	A	&	B e C	& incluído	\\  \hline
+		26	&	A(X)&	B e C	& excluído	\\  \hline
+		27	&	A(X)&	B e C	& excluído	\\  \hline
+		28	&	A	&	B e C	& incluído	\\  \hline
+		29	&	A	&	B e C	& incluído	\\  \hline
+		30	&	A(X)	&	B e C	& excluído	\\  \hline
+		31	&	A(X)	&	B e C	& excluído	\\  \hline
+		32	&	A	&	B e C	& incluído	\\  \hline
+		33	&	A(X)&	B e C	& excluído	\\  \hline
+		34	&	A(X)&	B e C	& excluído	\\  \hline
+		35	&	A	&	B e C	& incluído 	\\  \hline
+		36	&	A(X)&	B e C	& excluído 	\\  \hline
+		37	&	A(X)&	B e C	& excluído	\\  \hline
+		38	&	A(X)&	B e C	& excluído	\\  \hline
+		39	&	A(X)&	B e C	& excluído	\\  \hline
+		40	&	A	&	B e C	& incluído	\\  \hline
+		41	&	A	&	B e C	& incluído	\\  \hline
+		42	&	A	&	B e C	& incluído	\\  \hline
+		43	&	A(X)&	B e C	& excluído	\\  \hline
+		44	&	A	&	B e C	& incluído	\\  \hline
+		45	&	A	&	B e C	& incluído	\\  \hline
+		46	&	A	&	B e C	& incluído	\\  \hline
+		47	&	A(X)&	B e C	& excluído	\\  \hline
+		48	&	A(X)&	B e C	& excluído	\\  \hline
+		49	&	A(X)&	B e C	& excluído	\\  \hline
+		50	&	A	&	B e C	& incluído	\\  \hline
+		51	&	A(X)&	B e C	& excluído	\\  \hline
+		52	&	A	&	B e C	& incluído	\\	\hline
+		53	&	A(X)	&	B e C	& excluído	\\  \hline
+		54	&	A(X)	&	B e C	& excluído	\\  \hline
+		55	&	A(X)&	B e C	& excluído	\\  \hline
+		56	&	A	&	B e C	& incluído	\\  \hline
+		57	&	A(X)&	B e C	& excluído	\\  \hline
+		58	&	A(X)&	B e C	& excluído	\\  \hline
+		59	&	A(X)&	B e C	& excluído	\\  \hline
+		60	&	A(X)&	B e C	& excluído	\\  \hline
+		61	&	A(X)	&	B e C	& excluído	\\  \hline
+		62	&	A(X)	&	B e C	& excluído	\\  \hline
+		63	&	A(X)&	B e C	& excluído	\\  \hline
+		64	&	A(X)&	B e C	& excluído	\\  \hline
+		65	&	A(X)&	B e C	& excluído	\\  \hline
+		66	&	A(X)&	B e C	& excluído	\\  \hline
+		67	&	A(X)&	B e C	& excluído	\\  \hline
+		68	&	A(X)&	B e C	& excluído	\\  \hline
+		69	&	A(X)&	B e C	& excluído	\\  \hline
+		70	&	A(X)&	B e C	& excluído	\\  	\hline		
+		71	&	A(X)	&	B e C	& excluído	\\  	\hline		
+		72	&	A(X)&	B e C	& excluído	\\  \hline
+		73	&	A(X)&	B e C	& excluído	\\  \hline
+		74	&	A(X)&	B e C	& excluído	\\  \hline
+		75	&	A(X)&	B e C	& excluído	\\  \hline
+		76	&	A(X)&	B e C	& excluído	\\  \hline
+		77	&	A(X)&	B e C	& excluído	\\ \hline
+
+%	Fecha ambiente para tabelas com mais de uma página.
+\end{longtable}
+
+%	Fim do documento em Latex
+\end{document}

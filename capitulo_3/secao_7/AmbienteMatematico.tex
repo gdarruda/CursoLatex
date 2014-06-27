@@ -1,0 +1,47 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+%Pacote para ambiente matemático
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{mathtools}
+
+%Verbatim
+\usepackage{verbatim}
+
+%	Início do documento em Latex
+\begin{document}
+Como fazer equações em \LaTeX\ (Comando para escrever a palavra \emph{Latex}) ?\\
+Como tudo no latex $\ldots$ será que existe um pacote para isso? 		\\
+Equações em linha e em bloco.
+
+\section{Equações em Linha}
+Equações pequenas podem ser escritas dentro do texto $x = x_{0} + e^{\sqrt{x!}}\frac{\pi}{\alpha}$, em outras palavras, continua na mesma linha.
+
+\section{Equações em Bloco}
+Para equações maiores podemos utilizar o ambiente em bloco.
+
+%	Abre ambiente matemático em bloco no latex
+%para trocar de linha usamos \\ o comando \nonumber 
+%evita que uma linha seja numerada
+\begin{eqnarray}
+\nonumber 5n^{4} - 37n^{3} + 13n - 4 &\leq& Kn^{4} \Leftrightarrow \\
+5n^{4} - 37n^{3} + 13n - 4 &\leq& 5n^{4} - 37n^{4} + 13n^{4} -4n^{4} \leq  \\
+\nonumber -23n^{4} &\leq&  Kn^{4}
+\end{eqnarray}
+
+\section{Alguns símbolos matemáticos}
+\begin{itemize}
+\item menor ou igual $\leq$.
+\item para elevar um número ao qudrado $x^{2}$ usamos o circunflexo.
+\item para escrever um índice em uma variável usamos o \emph{underscore} $x_{2}$.
+\item para obter a raiz cúbica de um número usamos o comando $\sqrt[3]{x}$.
+\item para obter a razão entre $a$ e $b$ usamos o comando $\frac{a}{b}$.
+\item há letras gregas e número famosos e.g. $\pi$, $\alpha$, $\Omega$.
+\end{itemize}
+
+
+%	Fim do documento em Latex
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+%Pacote para tratar figuras
+\usepackage{graphicx}
+\usepackage{subfig}
+
+
+%	Início do documento em Latex
+\begin{document}
+
+\section{Figuras}
+Como inserir figuras em \LaTeX\ (Comando para escrever a palavra \emph{Latex}) ? \\
+Como tudo no latex $\ldots$ será que existe um pacote para isso? 		\\
+Figuras únicas e lado a lado.
+
+\section{Figura única}
+%	Abre ambiente para adicionar figura única.
+\begin{figure}[!htb]
+	%	Centraliza a figura
+    \centering
+    
+    %	Legenda na figura
+    \caption{Figura única.}
+	
+	%	Entre [] a scala da figura e entre {} o caminho relativo
+	%em ambiente UNIX like se for Windows trocar a barra para \
+    \includegraphics[scale=0.4]{./kenny}
+	
+	%	Rótulo para figura
+    \label{grafico_car}
+\end{figure}
+
+\newpage
+
+\section{Figuras lado a lado}
+%	Abre ambiente para adicionar figura.
+\begin{figure}[!htb]
+
+%	Centraliza a figura
+\centering
+
+%	Cria subfigura interna 01 entre [] legenda: cartman e heigth (altura)
+%	Entre {} caminho relativo
+\subfloat[cartman]{
+\includegraphics[height=5cm]{cartman}
+
+%Rótulo da subfigura cartman
+\label{cartman}
+}
+
+%	Espaco entre subfiguras
+\quad 
+
+%	Cria subfigura interna 02 entre [] legenda: kenny e heigth (altura)
+%	Entre {} caminho relativo
+\subfloat[kenny]{
+
+%	Cria subfigura interna 01 entre [] legenda: cartman e heigth (altura)
+%	Entre {} caminho relativo
+\includegraphics[height=5cm]{kenny}
+
+%Rótulo da subfigura cartman
+\label{kenny}
+}
+
+%Legenda e Rótulo das duas figuras juntas (cartman + kenny)
+\caption{Subfiguras lado a lado}
+\label{fig01}
+\end{figure}
+
+\newpage
+
+\section{Nota sobre os parâmetros [!htb]}
+Nos parâmetros opcionais das figuras (aqueles entre colchetes) há a opção $!htb$ sua função é de alinhar a figura na página, seu significado é
+\begin{itemize}
+\item h, here
+\item t, top
+\item b, bottom
+\item p, page of float
+\end{itemize}
+
+
+%	Fim do documento em Latex
+\end{document}

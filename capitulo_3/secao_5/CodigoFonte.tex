@@ -1,0 +1,45 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+%	Adiciona pacotes de cores em latex, 
+%necessário para colorir o código.
+\usepackage{color}
+\usepackage{xcolor}  
+
+%	Configura a exibição do código 
+%fonte dentro do ambiente listing.
+\usepackage{listings}
+\lstset{		
+	language = R, 					% Linguagem de programação.
+	keywordstyle = \color{blue}, 		% Cor das palavras chaves.
+	commentstyle = \color{green}, 	% Cor dos Comentários.
+	stringstyle =  \color{red}, 		% Cor de Strings.
+	numbers=left,					% Posição da numeração das linhas.
+	stepnumber=1,					% Incremento dos números a cada x unidades.
+	firstnumber=1,					% Começa a numeração em x.
+	numberstyle=\tiny,				% Tamanho dos números.
+	extendedchars=true,				% Aceita caracteres extras.
+	breaklines=true,					% Aceita quebra de linhas.
+	frame=tb,						% Acrescenta uma caixa em cima e embaixo do código.
+	basicstyle=\footnotesize,		% Tamanho do código.
+	showstringspaces=false,			% Exibe espaço entre strings.
+    }
+        
+        
+%	Início do documento em Latex
+\begin{document}
+
+\section{Código Fonte}
+Vamos apresentar uma forma elegante para incluir código fonte no seu arquivo \LaTeX\. Primeiro é necessário um arquivo fonte de alguma linguagem de programação e.g. C, VB, R
+
+%	Entre colchetes[] alguns parâmetros: rótulo, linguagem e legenda respectivamente.
+%	Entre chaves {} o caminho relativo do arquivo em ambiente UNIX like, 
+%se estiver no Windows ALTERE a barra / para \
+%-------------------------------------------------------------------------------------%
+\lstinputlisting[label=CODIGO01,language=R,caption=Script geral que resolve a tarefa 01.]{./Tarefa01.R}
+%-------------------------------------------------------------------------------------%
+
+
+%	Fim do documento em Latex
+\end{document}
